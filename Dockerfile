@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y nodejs --no-install-recommends && rm -r
 # see http://guides.rubyonrails.org/command_line.html#rails-dbconsole
 RUN apt-get update && apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
+# this is in the Docker compose tutorial
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
+
 ENV RAILS_VERSION 4.2.5.1
 
 # All the setup for the actual rails app
