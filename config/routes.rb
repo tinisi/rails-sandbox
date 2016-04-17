@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :humen
+  
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,6 +10,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root 'welcome#index'
+
+  # resources :humen
+  # root 'humen#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
