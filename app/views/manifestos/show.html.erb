@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @manifesto.content %>
+</p>
+
+<p>
+  <strong>Create date:</strong>
+  <%= @manifesto.create_date %>
+</p>
+
+<p>
+  <strong>Human:</strong>
+  <%= @manifesto.human_id %>
+</p>
+
+<%= link_to 'Edit', edit_manifesto_path(@manifesto) %> |
+<%= link_to 'Back', manifestos_path %>

@@ -35,6 +35,12 @@ docker-compose run web bin/rails generate scaffold Human name:string email:strin
 
 docker-compose run web bundle exec rake db:migrate
 
+And adding an associated resource, Manifesto!
+
+docker-compose run web bin/rails generate scaffold Manifesto content:text create_date:datetime human_id:integer
+
+docker-compose run web bundle exec rake db:migrate
+
 3/1/2016
 
 Pulled the project into another user and built.
