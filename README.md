@@ -1,6 +1,8 @@
 # rails-training
 A simple rails site to try stuff with and be learnin'
 
+
+
 ## Getting Started
 
 Now that we are bootstrapped, assuming you have your environment pointed to a running docker host, you should be able to check out this code and run something like this and you'll have a running although empty rails site.
@@ -11,7 +13,35 @@ docker-compose up
 docker-compose run web rake db:create
 ```
 
+```
+sudo docker exec -i -t rails-training_web bash
+```
+
 ## Dev notes
+
+4/17/2016
+
+figured out that my docker issues with running this against ESP's dev docker stack were not a problem with my project, but our custom docker hosts not supporting the magic of loading local code.
+
+So, made a new docker-machine provisioned box and away I go.
+
+Making a home page quick and then going on to the tutorial:
+
+https://www.railstutorial.org/book
+
+docker-compose run web bin/rails generate controller welcome index
+
+
+docker-compose run web bin/rails _4.2.5.1_ new toy_app
+
+
+3/1/2016
+
+Pulled the project into another user and built.
+
+In an odd state where docker-compose up throws an error about not being able to find Gemfile.
+
+If I comment out the volume, it works, so my image is good.
 
 2/14/2016
 
