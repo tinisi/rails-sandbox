@@ -31,9 +31,9 @@ https://www.railstutorial.org/book
 
 docker-compose run web bin/rails generate controller welcome index
 
+docker-compose run web bin/rails generate scaffold Human name:string email:string height:integer
 
-docker-compose run web bin/rails _4.2.5.1_ new toy_app
-
+docker-compose run web bundle exec rake db:migrate
 
 3/1/2016
 
