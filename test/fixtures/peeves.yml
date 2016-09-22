@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  peeve_content: Pet One
+  create_date: 2016-09-19 23:55:55
+  human_id: <%= ActiveRecord::FixtureSet.identify(:one) %>
+
+two:
+  peeve_content: Pet Two
+  create_date: 2016-09-19 23:55:56
+  human_id: <%= ActiveRecord::FixtureSet.identify(:two) %>

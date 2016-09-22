@@ -1,8 +1,6 @@
 # rails-training
 A simple rails site to try stuff with and be learnin'
 
-
-
 ## Getting Started
 
 Now that we are bootstrapped, assuming you have your environment pointed to a running docker host, you should be able to check out this code and run something like this and you'll have a running although empty rails site.
@@ -11,6 +9,7 @@ Now that we are bootstrapped, assuming you have your environment pointed to a ru
 docker-compose build
 docker-compose up
 docker-compose run web rake db:create
+docker-compose run web bundle exec rake db:migrate
 ```
 
 ```
@@ -18,6 +17,15 @@ sudo docker exec -i -t rails-training_web bash
 ```
 
 ## Dev notes
+
+9/20/2016
+
+docker-compose run web bundle exec rake test
+
+docker-compose run web bin/rails console
+
+docker-compose run web bin/rails generate migration create_peeves
+
 
 4/17/2016
 
