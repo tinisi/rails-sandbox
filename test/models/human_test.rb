@@ -6,8 +6,12 @@ class HumanTest < ActiveSupport::TestCase
     @human = humen(:one)
   end
 
-  test "wtf" do
-    assert_equal @human.peeves[0].peeve_content, 'Pet One'
+  test 'humans have peeves' do
+    assert_equal 'Pet One', @human.peeves[0].peeve_content
+  end
+
+  test 'peeves have levels with labels' do
+    assert_equal 'PEEVE: ' + 6.to_s, @human.peeves[0].calc_peeve_level('PEEVE')
   end
 
 end

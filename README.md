@@ -8,19 +8,19 @@ Now that we are bootstrapped, assuming you have your environment pointed to a ru
 ```
 docker-compose build
 docker-compose up
-docker-compose run web rake db:create
-docker-compose run web bundle exec rake db:migrate
+docker-compose exec web bundle exec rake db:create
+docker-compose exec web bundle exec rake db:migrate
 ```
 
 ```
-sudo docker exec -i -t rails-training_web bash
+sudo docker exec -i -t railstraining_web_1 bash
 ```
 
 ## Dev notes
 
 9/20/2016
 
-docker-compose run web bundle exec rake test
+docker-compose exec web bundle exec rake test
 
 docker-compose run web bin/rails console
 
